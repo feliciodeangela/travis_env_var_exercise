@@ -1,3 +1,4 @@
+const value=process.env.VALUE;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -6,8 +7,7 @@ function sleep(ms) {
 async function main() {
   while(true) {
     console.log("Microservices rock!");
-    const value=process.env.VALUE;
-    console.log(`value`);
+    console.log(`${value}`);
     await sleep(5000);
   }
 }
